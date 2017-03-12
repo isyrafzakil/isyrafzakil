@@ -1,85 +1,23 @@
-<!DOCTYPE html>
-<html lang="en-US">
-    <head>
-        <title>Raf Portfolio</title>
-    </head>
-    <body bgcolor="white">
-        <p align="center">
-            <font face="Consolas" size="62px" color="purple">
-                <strong>Ahmad Isyraf Imrani Mohd Zakil Hussin</strong> 
-            </font>
-            <font color="green">
-            <center>
-                <h1> Education </h1>
-                <font color="grey">
-                Computer Science Engineering
-                <br />
-                The Ohio State University
-                </font>
-                
-                <h1> About Me </h1>
-                <font color="grey">
-                Strong interest in robotics, artificial intelligence, big data, computer security,
-                <br /> software engineering, computer games and virtual reality.
-                </font>
-                
-                <h1> Skills </h1>
-                <font color="grey">
-                Java | HTML5 | Arduino | C++ | Python | MATLAB
-                <br />
-                </font>
-                
-                <h1> Projects </h1>
-                
-                <font color="black">
-                <h2> Train Project, The Ohio State University </h2>
-                <font color="blue">
-                <h3> August-December 2014 </h3>
-                </font>
-                <font color="grey">
-                - Programmed a moving train model across rural and city areas using Matlab and Arduino.
-                <br />
-                - Cracked problems of coding within constraints given by the instructor
-                </font>
-                
-                <h2> Nanotechnology Project, The Ohio State University </h2>
-                <font color="blue">
-                <h3> January-April 2015 </h3>
-                </font>
-                <font color="grey">
-                - Designed 2 lab-on-a-chip that can detect and measure the concentration
-                <br /> of fluorescein (for detection of dry eye)
-                <br />
-                - Manipulated designs based on observations and analysis from previous 
-                <br />testing to improve its efficiency by using Solidworks.
-                </font>
-                
-                <h2> GPA Calculator, The Ohio State University </h2>
-                <font color="blue">
-                <h3> April 2015 </h3>
-                </font>
-                <font color="grey">
-                - Developed an interactive GPA calculator that utilized MATLAB's Graphic User Interface (GUI)
-                </font>
-                
-                <font color="green">
-                <h1> Hackathons </h1>
-                </font>
-                
-                <h2> Code for Good, JPMorgan Chase & Co. </h2>
-                <font color="blue">
-                <h3> October 2015 </h3>
-                </font>
-                <font color="grey">
-                - Developed an app using Amazon Echo platform for Lebron James Family Foundation. 
-                <br />
-                - This app's functionality includes enhancing communication between the Foundation and 
-                <br />
-                school kids in Akron, Ohio and also function as a database for any updates on the school kids.
-                </font>
-                </font>         
-            </center>
-            </font>
-        </p>
-    </body></html>
+---
+layout: default
+---
 
+<div class="home">
+
+  <h1 class="page-heading">Posts</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>

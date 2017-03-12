@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
+title:  "Welcome to Isyraf's site!"
 date:   2017-03-12 03:46:35 +0000
 categories: jekyll update
 ---
